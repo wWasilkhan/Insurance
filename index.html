@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Insurance Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="This is meta description">
+  <meta name="" content="">
+  <link rel="shortcut icon" href="images/Insurance faviicon.png" type="image/x-icon">
+  <link rel="icon" href="images/Insurance faviicon.png" type="image/x-icon">
+  <!-- # Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- # CSS Plugins -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+  <link rel="stylesheet" href="plugins/font-awesome/brands.css">
+  <link rel="stylesheet" href="plugins/font-awesome/solid.css">
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- # Main Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- navigation -->
+  <header class="navigation bg-tertiary">
+    <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+      <div class="container">
+        <a class="navbar-brand" href="">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="200" src="images/Insurance logo.png"
+            alt="Wallet">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item "> <a class="nav-link" href="">Services</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="">Company Strategies</a>
+            </li>
+            <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">New Client</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item " href="">Buy online</a>
+                </li>
+                <li><a class="dropdown-item " href="blog-details.html">Insurance-plans</a>
+                </li>
+              </ul>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">Existing Client</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item " href="blog.html">Customers Portal</a>
+                </li>
+                <li><a class="dropdown-item " href="blog-details.html">Policy Holders Support</a>
+                </li>
+              </ul>
+            </li> -->
+            <li class="nav-item "> <a class="nav-link" href="">About</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="">Contact</a>
+            </li>
+          </ul>
+           <a href="#!" class="btn btn-outline-primary">Log In</a>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton1">
+              <img class="rounded-circle me-lg-2 profile" src="images/profile.jpg" alt="" style="width: 40x; height: 40px;">
+              <span class="d-none d-lg-inline-flex text-primary">John Doe</span>
+          </a>
+          <div class="dropdown-menu bg-primary border-0 rounded-0 rounded-bottom m-0" aria-labelledby="dropdownMenuButton1">
+              <a href="#" class="dropdown-item">My Profile</a>
+              <a href="#" class="dropdown-item">Settings</a>
+              <a href="#" class="dropdown-item">Log Out</a>
+          </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /navigation -->
+
+  <div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h4 class="modal-title" id="exampleModalLabel">How much do you need?</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="#!" method="post">
+            <div class="row">
+              <div class="col-lg-6 mb-4 pb-2">
+                <div class="form-group">
+                  <label for="loan_amount" class="form-label">Amount</label>
+                  <input type="number" class="form-control shadow-none" id="loan_amount" placeholder="ex: 25000">
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 pb-2">
+                <div class="form-group">
+                  <label for="loan_how_long_for" class="form-label">How long for?</label>
+                  <input type="number" class="form-control shadow-none" id="loan_how_long_for" placeholder="ex: 12">
+                </div>
+              </div>
+              <div class="col-lg-12 mb-4 pb-2">
+                <div class="form-group">
+                  <label for="loan_repayment" class="form-label">Repayment</label>
+                  <input type="number" class="form-control shadow-none" id="loan_repayment" disabled>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 pb-2">
+                <div class="form-group">
+                  <label for="loan_full_name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control shadow-none" id="loan_full_name">
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4 pb-2">
+                <div class="form-group">
+                  <label for="loan_email_address" class="form-label">Email address</label>
+                  <input type="email" class="form-control shadow-none" id="loan_email_address">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary w-100">Get Your Loan Now</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="banner bg-tertiary position-relative overflow-hidden">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="block text-center text-lg-start pe-0 pe-xl-5">
+            <h1 class="text-capitalize mb-4">Insure Your Peace of Mind with Online insurance</h1>
+            <p class="mb-4">Discover peace and protection with Online Insurance. Your trusted partner for a secure
+              tomorrow.
+            </p> 
+            <a type="button" class="btn btn-primary" href="#" data-bs-toggle="modal"
+              data-bs-target="#applyLoan">Apply
+              Insurance Now <span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ps-lg-5 text-center">
+            <img loading="lazy" decoding="async" src="images/bg image.png" alt="banner image" class="w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="has-shapes">
+      <svg class="shape shape-left text-light" viewBox="0 0 192 752" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M-30.883 0C-41.3436 36.4248 -22.7145 75.8085 4.29154 102.398C31.2976 128.987 65.8677 146.199 97.6457 166.87C129.424 187.542 160.139 213.902 172.162 249.847C193.542 313.799 149.886 378.897 129.069 443.036C97.5623 540.079 122.109 653.229 191 728.495"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M-55.5959 7.52271C-66.0565 43.9475 -47.4274 83.3312 -20.4214 109.92C6.58466 136.51 41.1549 153.722 72.9328 174.393C104.711 195.064 135.426 221.425 147.449 257.37C168.829 321.322 125.174 386.42 104.356 450.559C72.8494 547.601 97.3965 660.752 166.287 736.018"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M-80.3302 15.0449C-90.7909 51.4697 -72.1617 90.8535 -45.1557 117.443C-18.1497 144.032 16.4205 161.244 48.1984 181.915C79.9763 202.587 110.691 228.947 122.715 264.892C144.095 328.844 100.439 393.942 79.622 458.081C48.115 555.123 72.6622 668.274 141.552 743.54"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M-105.045 22.5676C-115.506 58.9924 -96.8766 98.3762 -69.8706 124.965C-42.8646 151.555 -8.29436 168.767 23.4835 189.438C55.2615 210.109 85.9766 236.469 98.0001 272.415C119.38 336.367 75.7243 401.464 54.9072 465.604C23.4002 562.646 47.9473 675.796 116.838 751.063"
+          stroke="currentColor" stroke-miterlimit="10" />
+      </svg>
+      <svg class="shape shape-right text-light" viewBox="0 0 731 746" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.1794 745.14C1.80036 707.275 -5.75764 666.015 8.73984 629.537C27.748 581.745 80.4729 554.968 131.538 548.843C182.604 542.703 234.032 552.841 285.323 556.748C336.615 560.64 391.543 557.276 433.828 527.964C492.452 487.323 511.701 408.123 564.607 360.255C608.718 320.353 675.307 307.183 731.29 327.323"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M51.0253 745.14C41.2045 709.326 34.0538 670.284 47.7668 635.783C65.7491 590.571 115.623 565.242 163.928 559.449C212.248 553.641 260.884 563.235 309.4 566.931C357.916 570.627 409.887 567.429 449.879 539.701C505.35 501.247 523.543 426.331 573.598 381.059C615.326 343.314 678.324 330.853 731.275 349.906"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M89.8715 745.14C80.6239 711.363 73.8654 674.568 86.8091 642.028C103.766 599.396 150.788 575.515 196.347 570.054C241.906 564.578 287.767 573.629 333.523 577.099C379.278 580.584 428.277 577.567 465.976 551.423C518.279 515.172 535.431 444.525 582.62 401.832C621.964 366.229 681.356 354.493 731.291 372.46"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M128.718 745.14C120.029 713.414 113.678 678.838 125.837 648.274C141.768 608.221 185.939 585.788 228.737 580.659C271.536 575.515 314.621 584.008 357.6 587.282C400.58 590.556 446.607 587.719 482.028 563.16C531.163 529.111 547.275 462.733 591.612 422.635C628.572 389.19 684.375 378.162 731.276 395.043"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M167.564 745.14C159.432 715.451 153.504 683.107 164.863 654.519C179.753 617.046 221.088 596.062 261.126 591.265C301.164 586.452 341.473 594.402 381.677 597.465C421.88 600.527 464.95 597.872 498.094 574.896C544.061 543.035 559.146 480.942 600.617 443.423C635.194 412.135 687.406 401.817 731.276 417.612"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M817.266 289.466C813.108 259.989 787.151 237.697 759.261 227.271C731.372 216.846 701.077 215.553 671.666 210.904C642.254 206.24 611.795 197.156 591.664 175.224C555.853 136.189 566.345 75.5336 560.763 22.8649C552.302 -56.8256 498.487 -130.133 425 -162.081"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M832.584 276.159C828.427 246.683 802.469 224.391 774.58 213.965C746.69 203.539 716.395 202.246 686.984 197.598C657.573 192.934 627.114 183.85 606.982 161.918C571.172 122.883 581.663 62.2275 576.082 9.55873C567.62 -70.1318 513.806 -143.439 440.318 -175.387"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M847.904 262.853C843.747 233.376 817.789 211.084 789.9 200.659C762.011 190.233 731.716 188.94 702.304 184.292C672.893 179.627 642.434 170.544 622.303 148.612C586.492 109.577 596.983 48.9211 591.402 -3.74766C582.94 -83.4382 529.126 -156.746 455.638 -188.694"
+          stroke="currentColor" stroke-miterlimit="10" />
+        <path
+          d="M863.24 249.547C859.083 220.07 833.125 197.778 805.236 187.353C777.347 176.927 747.051 175.634 717.64 170.986C688.229 166.321 657.77 157.237 637.639 135.306C601.828 96.2707 612.319 35.6149 606.738 -17.0538C598.276 -96.7443 544.462 -170.052 470.974 -202"
+          stroke="currentColor" stroke-miterlimit="10" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Start -->
+  <section class="section">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow">
+            <div class="position-relative overflow-hidden rounded ps-5 pt-5 h-100" style="min-height: 400px">
+              <img class="position-absolute w-100 h-100" src="images/about/about.jpg" alt=""
+                style="object-fit: cover" />
+              <div class="position-absolute top-0 start-0 bg-white rounded pe-3 pb-3"
+                style="width: 200px; height: 200px">
+                <div class="d-flex flex-column justify-content-center text-center bg-primary rounded h-100 p-3">
+                  <h1 class="text-white mb-0">10</h1>
+                  <h2 class="text-white">Years</h2>
+                  <h5 class="text-white mb-0">Experience</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow">
+            <div class="h-100">
+              <p class="text-primary text-uppercase fw-bold mb-3">About Ourself</p>
+              <h1 class="display-6 mb-4 fw-bold">
+                Where Security Meets Simplicity Online Insurance
+              </h1>
+              <div class="row g-4 mb-4">
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center">
+                    <img class="flex-shrink-0 me-3" src="images/icon/insurance-policy (1).png" alt="" />
+                    <h5 class="mb-0">Flexible Insurance Plans</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center">
+                    <img class="flex-shrink-0 me-3" src="images/icon/plans.png" alt="" />
+                    <h5 class="mb-0">Money Back Guarantee</h5>
+                  </div>
+                </div>
+              </div>
+              <p class="mb-4">
+                Our mission is to empower lives, providing comprehensive coverage that ensures peace of mind in every
+                circumstance.
+              </p>
+              <div class="border-top mt-4 pt-4">
+                <div class="d-flex align-items-center">
+                  <img class="flex-shrink-0 rounded-circle me-3" src="images/profile.jpg" alt="" />
+                  <h5 class="mb-0">Call Us: <a href="tel:+3301563965">+3301563965</a> </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About End -->
+  <!-- Our Services -->
+  <section class="section core-value bg-tertiary">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="section-title ps-0 ps-lg-5">
+            <p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
+            <h2 class="h1">Our online and offline services</h2>
+            <div class="content pt-3">
+              <p>Online insurance services simplify the process of obtaining and managing insurance policies. With just a few clicks, users can compare quotes, purchase coverage, and access policy information conveniently. These platforms often offer a user-friendly interface, real-time updates, and digital documentation, making insurance management more efficient and accessible for policyholders. </p>
+              <p>Experience excellence with Online Insurance Services. Our dedicated team is committed to providing
+                top-notch service, ensuring your peace of mind in every interaction.The seamless online experience enhances customer convenience and transparency in the insurance industry.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row position-relative gy-4">
+            <a class="icon-box-item col-md-6">
+              <div class="block bg-white">
+                <div class="icon rounded-number"><img class="flex-shrink-0" src="images/icon/life insurance.png" alt="" /></div>
+                <h3 class="mb-3">Life Insurance</h3>
+                <p class="mb-0">Life insurance secures financial support for loved ones after the policyholder's death.</p>
+              </div>
+            </a>
+            <a class="icon-box-item col-md-6">
+              <div class="block bg-white">
+                <div class="icon rounded-number"><img class="flex-shrink-0" src="images/icon/health insurance.png" alt="" /></div>
+                <h3 class="mb-3">Medical Insurance</h3>
+                <p class="mb-0">Medical insurance supports essential healthcare costs and medical treatments.</p>
+              </div>
+            </a>
+            <a class="icon-box-item col-md-6">
+              <div class="block bg-white">
+                <div class="icon rounded-number"><img class="flex-shrink-0" src="images/icon/car insurance.png" alt="" /></div>
+                <h3 class="mb-3">Motor Insurance</h3>
+                <p class="mb-0">Motor insurance safeguards vehicles, covering damages, accidents, and theft liabilities.</p>
+              </div>
+            </a>
+            <a class="icon-box-item col-md-6">
+              <div class="block bg-white">
+                <div class="icon rounded-number"><img class="flex-shrink-0" src="images/icon/home-insurance.png" alt="" /></div>
+                <h3 class="mb-3">Home Insurance</h3>
+                <p class="mb-0">Home insurance protects residences, covering damages and losses from various perils.</p>
+              </div>
+            </a>
+            <div class="has-shapes">
+              <svg class="shape shape-1 text-primary" width="71" height="71" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.50598 89.8686C8.17023 89.3091 7.83449 88.6376 7.49875 88.078L66.0305 0.336418C66.7019 0.448334 67.3734 0.560249 68.0449 0.560249L8.50598 89.8686Z" fill="currentColor" />
+                <path d="M5.03787 83.2646C4.70213 82.5932 4.47829 81.9217 4.14255 81.2502L58.3096 -0.00032826C59.093 -0.000328191 59.7645 -0.000328132 60.5479 -0.000328064L5.03787 83.2646Z" fill="currentColor" />
+                <path d="M16.9007 100.613C16.453 100.165 16.0053 99.7175 15.5577 99.2698L79.4613 3.47031C80.0209 3.69414 80.6924 3.91795 81.252 4.14178L16.9007 100.613Z" fill="currentColor" />
+                <path d="M12.5352 95.5762C12.0876 95.0166 11.7518 94.5689 11.3042 94.0094L72.9695 1.45541C73.641 1.56732 74.2006 1.79115 74.8721 1.90306L12.5352 95.5762Z" fill="currentColor" />
+                <path d="M0.00101471 55.5103C0.11293 54.1673 0.224831 52.9362 0.336747 51.5932L29.6586 7.72242C30.7777 7.05093 31.8969 6.49136 33.1279 5.93178L0.00101471 55.5103Z" fill="currentColor" />
+                <path d="M26.1887 108.334C25.9649 108.223 25.7411 107.999 25.5172 107.887L91.2115 9.40136C91.4353 9.51328 91.6592 9.7371 91.883 9.84901C92.2188 10.0728 92.4426 10.2967 92.7783 10.4086L27.084 108.894C26.8602 108.67 26.5245 108.558 26.1887 108.334Z" fill="currentColor" />
+                <path d="M114.042 81.0269C112.587 84.7201 110.685 88.4133 108.334 91.8827C105.984 95.3521 103.41 98.4857 100.5 101.396L114.042 81.0269Z" fill="currentColor" />
+                <path d="M0.335842 66.7012C0.223927 65.6939 0.112026 64.7986 0.000110881 63.7914L40.7373 2.79753C41.6326 2.46179 42.6398 2.23796 43.5352 2.01413L0.335842 66.7012Z" fill="currentColor" />
+                <path d="M2.23929 75.6538C2.01546 74.8704 1.79162 74.087 1.56779 73.3036L50.0271 0.558655C50.8105 0.446747 51.7059 0.334824 52.4893 0.222908L2.23929 75.6538Z" fill="currentColor" />
+                <path d="M32.793 112.139C32.2335 111.915 31.6739 111.58 31.1143 111.244L96.4728 13.206C96.9205 13.6537 97.4801 13.9894 97.9277 14.4371L32.793 112.139Z" fill="currentColor" />
+                <path d="M77.7822 115.161C76.8868 115.497 75.8796 115.72 74.9843 116.056L117.848 51.8168C117.96 52.824 118.072 53.7193 118.184 54.7266L77.7822 115.161Z" fill="currentColor" />
+                <path d="M68.493 117.512C67.7096 117.624 66.8143 117.736 66.0309 117.848L116.057 42.8644C116.281 43.6478 116.505 44.4312 116.729 45.3265L68.493 117.512Z" fill="currentColor" />
+                <path d="M60.0992 118.294C59.3158 118.294 58.6443 118.294 57.8609 118.294L113.259 35.2533C113.595 35.9248 113.819 36.5963 114.154 37.2678L60.0992 118.294Z" fill="currentColor" />
+                <path d="M21.8245 105.087C21.3768 104.64 20.8172 104.304 20.3696 103.856L85.6162 6.15427C86.1758 6.37809 86.7354 6.71384 87.2949 7.04959L21.8245 105.087Z" fill="currentColor" />
+                <path d="M89.0856 110.124C87.9665 110.795 86.7354 111.467 85.6162 112.026L118.184 63.1194C118.072 64.4624 117.96 65.8054 117.736 67.0364L89.0856 110.124Z" fill="currentColor" />
+                <path d="M3.69339 38.2759C5.2602 34.135 7.27468 30.1061 9.84873 26.189C12.4228 22.3839 15.3326 18.9145 18.5781 15.8928L3.69339 38.2759Z" fill="currentColor" />
+                <path d="M52.49 117.848C51.8185 117.736 51.147 117.736 50.4755 117.624L109.791 28.5392C110.126 29.0988 110.462 29.7703 110.798 30.3299L52.49 117.848Z" fill="currentColor" />
+                <path d="M38.9475 114.712C38.388 114.489 37.7165 114.265 37.1569 114.041L101.396 17.6818C101.844 18.1295 102.292 18.5771 102.739 19.0248L38.9475 114.712Z" fill="currentColor" />
+                <path d="M45.4392 116.728C44.7677 116.616 44.2081 116.392 43.5366 116.28L105.873 22.8306C106.321 23.3902 106.657 23.8378 107.105 24.3974L45.4392 116.728Z" fill="currentColor" />
+              </svg>
+              <svg class="shape shape-2 text-primary" width="100" height="100" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.50598 89.8686C8.17023 89.3091 7.83449 88.6376 7.49875 88.078L66.0305 0.336418C66.7019 0.448334 67.3734 0.560249 68.0449 0.560249L8.50598 89.8686Z" fill="currentColor" />
+                <path d="M5.03787 83.2646C4.70213 82.5932 4.47829 81.9217 4.14255 81.2502L58.3096 -0.00032826C59.093 -0.000328191 59.7645 -0.000328132 60.5479 -0.000328064L5.03787 83.2646Z" fill="currentColor" />
+                <path d="M16.9007 100.613C16.453 100.165 16.0053 99.7175 15.5577 99.2698L79.4613 3.47031C80.0209 3.69414 80.6924 3.91795 81.252 4.14178L16.9007 100.613Z" fill="currentColor" />
+                <path d="M12.5352 95.5762C12.0876 95.0166 11.7518 94.5689 11.3042 94.0094L72.9695 1.45541C73.641 1.56732 74.2006 1.79115 74.8721 1.90306L12.5352 95.5762Z" fill="currentColor" />
+                <path d="M0.00101471 55.5103C0.11293 54.1673 0.224831 52.9362 0.336747 51.5932L29.6586 7.72242C30.7777 7.05093 31.8969 6.49136 33.1279 5.93178L0.00101471 55.5103Z" fill="currentColor" />
+                <path d="M26.1887 108.334C25.9649 108.223 25.7411 107.999 25.5172 107.887L91.2115 9.40136C91.4353 9.51328 91.6592 9.7371 91.883 9.84901C92.2188 10.0728 92.4426 10.2967 92.7783 10.4086L27.084 108.894C26.8602 108.67 26.5245 108.558 26.1887 108.334Z" fill="currentColor" />
+                <path d="M114.042 81.0269C112.587 84.7201 110.685 88.4133 108.334 91.8827C105.984 95.3521 103.41 98.4857 100.5 101.396L114.042 81.0269Z" fill="currentColor" />
+                <path d="M0.335842 66.7012C0.223927 65.6939 0.112026 64.7986 0.000110881 63.7914L40.7373 2.79753C41.6326 2.46179 42.6398 2.23796 43.5352 2.01413L0.335842 66.7012Z" fill="currentColor" />
+                <path d="M2.23929 75.6538C2.01546 74.8704 1.79162 74.087 1.56779 73.3036L50.0271 0.558655C50.8105 0.446747 51.7059 0.334824 52.4893 0.222908L2.23929 75.6538Z" fill="currentColor" />
+                <path d="M32.793 112.139C32.2335 111.915 31.6739 111.58 31.1143 111.244L96.4728 13.206C96.9205 13.6537 97.4801 13.9894 97.9277 14.4371L32.793 112.139Z" fill="currentColor" />
+                <path d="M77.7822 115.161C76.8868 115.497 75.8796 115.72 74.9843 116.056L117.848 51.8168C117.96 52.824 118.072 53.7193 118.184 54.7266L77.7822 115.161Z" fill="currentColor" />
+                <path d="M68.493 117.512C67.7096 117.624 66.8143 117.736 66.0309 117.848L116.057 42.8644C116.281 43.6478 116.505 44.4312 116.729 45.3265L68.493 117.512Z" fill="currentColor" />
+                <path d="M60.0992 118.294C59.3158 118.294 58.6443 118.294 57.8609 118.294L113.259 35.2533C113.595 35.9248 113.819 36.5963 114.154 37.2678L60.0992 118.294Z" fill="currentColor" />
+                <path d="M21.8245 105.087C21.3768 104.64 20.8172 104.304 20.3696 103.856L85.6162 6.15427C86.1758 6.37809 86.7354 6.71384 87.2949 7.04959L21.8245 105.087Z" fill="currentColor" />
+                <path d="M89.0856 110.124C87.9665 110.795 86.7354 111.467 85.6162 112.026L118.184 63.1194C118.072 64.4624 117.96 65.8054 117.736 67.0364L89.0856 110.124Z" fill="currentColor" />
+                <path d="M3.69339 38.2759C5.2602 34.135 7.27468 30.1061 9.84873 26.189C12.4228 22.3839 15.3326 18.9145 18.5781 15.8928L3.69339 38.2759Z" fill="currentColor" />
+                <path d="M52.49 117.848C51.8185 117.736 51.147 117.736 50.4755 117.624L109.791 28.5392C110.126 29.0988 110.462 29.7703 110.798 30.3299L52.49 117.848Z" fill="currentColor" />
+                <path d="M38.9475 114.712C38.388 114.489 37.7165 114.265 37.1569 114.041L101.396 17.6818C101.844 18.1295 102.292 18.5771 102.739 19.0248L38.9475 114.712Z" fill="currentColor" />
+                <path d="M45.4392 116.728C44.7677 116.616 44.2081 116.392 43.5366 116.28L105.873 22.8306C106.321 23.3902 106.657 23.8378 107.105 24.3974L45.4392 116.728Z" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our Services -->
+  <!-- Perimum Calculator -->
+  <section class="homepage_tab position-relative">
+    <div class="section container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 mb-4">
+          <div class="section-title text-center">
+            <p class="text-primary text-uppercase fw-bold mb-3">Calculate Our Permium</p>
+            <h1>Get Know The Basics Simple Pricing And Payments</h1>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <ul class="payment_info_tab nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item m-2" role="presentation"> <a
+                class="nav-link btn btn-outline-primary effect-none text-dark active"
+                id="pills-how-much-can-i-recive-tab" data-bs-toggle="pill" href="#pills-how-much-can-i-recive"
+                role="tab" aria-controls="pills-how-much-can-i-recive" aria-selected="true">Home Insurance</a>
+            </li>
+            <li class="nav-item m-2" role="presentation"> <a
+                class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-much-does-it-costs-tab"
+                data-bs-toggle="pill" href="#pills-how-much-does-it-costs" role="tab"
+                aria-controls="pills-how-much-does-it-costs" aria-selected="true">Motor Insurance</a>
+            </li>
+            <li class="nav-item m-2" role="presentation"> <a
+                class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-do-i-repay-tab"
+                data-bs-toggle="pill" href="#pills-how-do-i-repay" role="tab" aria-controls="pills-how-do-i-repay"
+                aria-selected="true">Medical Insurance</a>
+            </li>
+            <li class="nav-item m-2" role="presentation"> <a
+                class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-do-i-tab"
+                data-bs-toggle="pill" href="#pills-how-do-i" role="tab" aria-controls="pills-how-do-i"
+                aria-selected="true">Life Insurance</a>
+            </li>
+          </ul>
+          <div class="rounded shadow bg-white p-5 tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-how-much-can-i-recive" role="tabpanel"
+              aria-labelledby="pills-how-much-can-i-recive-tab">
+              <div class="row align-items-center">
+                <div class="col-md-6 order-1 order-md-0">
+                  <div class="content-block">
+                    <div class="container mt-5">
+                      <form id="premiumCalculatorForm">
+                          <div class="mb-3">
+                              <label for="name">Name</label>
+                              <input type="text" class="form-control" id="name" name="name" required>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="email" name="email" required>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="gender">Gender</label>
+                              <select class="form-control" id="gender" name="gender" required>
+                                  <option value="male">Male</option>
+                                  <option value="female">Female</option>
+                              </select>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="coverage">Select Coverage</label>
+                              <select class="form-control" id="coverage" name="coverage" required>
+                                  <option value="building">Building</option>
+                                  <option value="content">Home Content</option>
+                              </select>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="building_value">Enter Building Value:</label>
+                              <input type="number" class="form-control" id="building_value" name="building_value" required>
+                          </div>
+                  
+                          <button type="button" class="btn btn-primary" onclick="calculatePremiumHome()">Calculate Premium</button>
+                      </form>
+                  
+                      <div id="resulthome" class="mt-4"></div>
+                  </div>
+                  
+                    
+                  </div>
+                </div>
+            
+              <div class="col-md-6 order-0 order-md-1 mb-5 mt-md-0">
+                <div class="image-block text-center">
+                  home
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="tab-pane fade " id="pills-how-much-does-it-costs" role="tabpanel"
+              aria-labelledby="pills-how-much-does-it-costs-tab">
+              <div class="row align-items-center">
+                <div class="col-md-6 order-1 order-md-0">
+                  <div class="content-block">
+                    <div class="container">
+                      <form id="insuranceForm">
+                        <div class="mb-3">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="phone">Phone Number</label>
+                          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="carBrand">Car Brand</label>
+                          <input type="text" class="form-control" id="carBrand" placeholder="Enter your car brand" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="modelName">Model Name</label>
+                          <input type="text" class="form-control" id="modelName" placeholder="Enter your car model name" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="manufacturingYear">Manufacturing Year</label>
+                          <input type="text" class="form-control" id="manufacturingYear" placeholder="Enter manufacturing year" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="tracker">Tracker</label>
+                          <select class="form-control" id="tracker" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                          <label for="currentValue">Current Value</label>
+                          <input type="number" class="form-control" id="currentValue" placeholder="Enter current value of the car" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="calculatePremiumcar()">Calculate Premium</button>
+                      </form>
+                      <div class="mt-3" id="result"></div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-md-6 order-0 order-md-1 mb-5 mt-md-0">
+                  <div class="image-block text-center">
+                    car
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade " id="pills-how-do-i-repay" role="tabpanel"
+              aria-labelledby="pills-how-do-i-repay-tab">
+              <div class="row align-items-center">
+                <div class="col-md-6 order-1 order-md-0">
+                  <div class="content-block">
+                     <div class="container mt-4">
+               <div id="calculator">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" onclick="showTab('myself')">Myself</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showTab('family')">Family</a>
+                </li>
+            </ul>
+
+            <div id="myselfTab" class="tab">
+                <h2 class="mt-3">Individual Plan</h2>
+                <form id="myselfForm" onsubmit="calculatePremium('myself'); return false;">
+                    <div class="mb-3">
+                        <label for="myselfName" class="form-label">Name*</label>
+                        <input type="text" class="form-control" id="myselfName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myselfEmail" class="form-label">Email*</label>
+                        <input type="email" class="form-control" id="myselfEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myselfPhone" class="form-label">Phone Number*</label>
+                        <input type="tel" class="form-control" id="myselfPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myselfAge" class="form-label">Enter Your Age</label>
+                        <input type="number" class="form-control" id="myselfAge" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="myselfGender" class="form-label">Enter Your Gender</label>
+                        <input class="form-control text-black" id="myselfGender" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="myselfHospitalizationLimit" class="form-label">Select Hospitalization Limit (PKR)</label>
+                        <select class="form-select" id="myselfHospitalizationLimit" required>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Platinum">Platinum</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Calculate Premium</button>
+                </form>
+            </div>
+
+            <div id="familyTab" class="tab" style="display:none;">
+                <h2 class="mt-3">Family Plan</h2>
+                <form id="familyForm" onsubmit="calculatePremium('family'); return false;">
+                    <div class="mb-3">
+                        <label for="familyName" class="form-label">Name*</label>
+                        <input type="text" class="form-control" id="familyName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="familyEmail" class="form-label">Email*</label>
+                        <input type="email" class="form-control" id="familyEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="familyPhone" class="form-label">Phone Number*</label>
+                        <input type="tel" class="form-control" id="familyPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="familyAge" class="form-label">Enter Your Age</label>
+                        <input type="number" class="form-control" id="familyAge" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="spouseAge" class="form-label">Enter Spouse Age</label>
+                        <input type="number" class="form-control" id="spouseAge" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="childQuantity" class="form-label">Enter your Child Quantity</label>
+                        <input type="number" class="form-control" id="childQuantity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="childAges" class="form-label">Enter your children ages</label>
+                        <input type="text" class="form-control" id="childAges" placeholder="Comma-separated ages" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="familyHospitalizationLimit" class="form-label">Select Hospitalization Limit (PKR)</label>
+                        <select class="form-select" id="familyHospitalizationLimit" required>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Platinum">Platinum</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Calculate Premium</button>
+                </form>
+            </div>
+
+            <div id="result" class="mt-3">
+                <h3>Result:</h3>
+                <p>Total Premium: <span id="totalPremium">0</span> PKR</p>
+                <p>Monthly Premium: <span id="monthlyPremium">0</span> PKR</p>
+            </div>
+        </div>
+    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 order-0 order-md-1 mb-5 mt-md-0">
+                  <div class="image-block text-center">
+                    <!-- <img loading="lazy" decoding="async" src="images/illustration-1.png" alt="How Do I Repay?"
+                      class="img-fluid"> -->
+                      medical
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade " id="pills-how-do-i" role="tabpanel"
+              aria-labelledby="pills-how-do-i">
+              <div class="row align-items-center">
+                <div class="col-md-6 order-1 order-md-0">
+                  <div class="content-block">
+                    <div class="container">
+                      <form id="premiumCalculatorForm">
+                          <div class="mb-3">
+                              <label for="name">Name:</label>
+                              <input type="text" class="form-control" id="name" name="name" required>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="email">Email:</label>
+                              <input type="email" class="form-control" id="email" name="email" required>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="gender">Gender:</label>
+                              <select class="form-control" id="gender" name="gender" required>
+                                  <option value="male">Male</option>
+                                  <option value="female">Female</option>
+                              </select>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="plan_objective">Plan Objective:</label>
+                              <input type="text" class="form-control" id="plan_objective" name="plan_objective" required>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="policy_term">Policy Term (in years):</label>
+                              <input type="number" class="form-control" id="policy_term" name="policy_term" required>
+                          </div>
+                  
+                          <div class="mb-3">
+                              <label for="monthly_income">Monthly Income:</label>
+                              <input type="number" class="form-control" id="monthly_income" name="monthly_income" required>
+                          </div>
+                  
+                          <button type="button" class="btn btn-primary" onclick="calculatePremiumlife()">Calculate Premium</button>
+                      </form>
+                      <div id="resultlife" class="mt-4"></div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-md-6 order-0 order-md-1 mb-5 mt-md-0">
+                  <div class="image-block text-center">
+                    <!-- <img loading="lazy" decoding="async" src="images/illustration-1.png" alt="How Do I Repay?"
+                      class="img-fluid"> -->
+                      life
+                  </div>
+                </div>
+              </div>
+            </div>
+      <div class="has-shapes">
+        <svg class="shape shape-left text-light" width="290" height="709" viewBox="0 0 290 709" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M-119.511 58.4275C-120.188 96.3185 -92.0001 129.539 -59.0325 148.232C-26.0649 166.926 11.7821 174.604 47.8274 186.346C83.8726 198.088 120.364 215.601 141.281 247.209C178.484 303.449 153.165 377.627 149.657 444.969C144.34 546.859 197.336 649.801 283.36 704.673"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M-141.434 72.0899C-142.111 109.981 -113.923 143.201 -80.9554 161.895C-47.9878 180.588 -10.1407 188.267 25.9045 200.009C61.9497 211.751 98.4408 229.263 119.358 260.872C156.561 317.111 131.242 391.29 127.734 458.631C122.417 560.522 175.414 663.463 261.437 718.335"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M-163.379 85.7578C-164.056 123.649 -135.868 156.869 -102.901 175.563C-69.9331 194.256 -32.086 201.934 3.9592 213.677C40.0044 225.419 76.4955 242.931 97.4127 274.54C134.616 330.779 109.296 404.957 105.789 472.299C100.472 574.19 153.468 677.131 239.492 732.003"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M-185.305 99.4208C-185.982 137.312 -157.794 170.532 -124.826 189.226C-91.8589 207.919 -54.0118 215.597 -17.9666 227.34C18.0787 239.082 54.5697 256.594 75.4869 288.203C112.69 344.442 87.3706 418.62 83.8633 485.962C78.5463 587.852 131.542 690.794 217.566 745.666"
+            stroke="currentColor" stroke-miterlimit="10" />
+        </svg>
+        <svg class="shape shape-right text-light" width="474" height="511" viewBox="0 0 474 511" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M601.776 325.899C579.043 348.894 552.727 371.275 520.74 375.956C478.826 382.079 438.015 355.5 412.619 321.6C387.211 287.707 373.264 246.852 354.93 208.66C336.584 170.473 311.566 132.682 273.247 114.593C220.12 89.5159 155.704 108.4 99.7772 90.3769C53.1531 75.3464 16.3392 33.2759 7.65012 -14.947"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M585.78 298.192C564.28 319.945 539.378 341.122 509.124 345.548C469.472 351.341 430.868 326.199 406.845 294.131C382.805 262.059 369.62 223.419 352.278 187.293C334.936 151.168 311.254 115.417 275.009 98.311C224.74 74.582 163.815 92.4554 110.913 75.3971C66.8087 61.1784 31.979 21.3767 23.7639 -24.2362"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M569.783 270.486C549.5 290.99 526.04 310.962 497.501 315.13C460.111 320.592 423.715 296.887 401.059 266.641C378.392 236.402 365.963 199.965 349.596 165.901C333.24 131.832 310.911 98.1265 276.74 82.0034C229.347 59.6271 171.895 76.4848 122.013 60.4086C80.419 47.0077 47.5905 9.47947 39.8431 -33.5342"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M553.787 242.779C534.737 262.041 512.691 280.809 485.884 284.722C450.757 289.853 416.568 267.586 395.286 239.173C373.993 210.766 362.308 176.538 346.945 144.535C331.581 112.533 310.605 80.8723 278.502 65.7217C233.984 44.6979 180.006 60.54 133.149 45.4289C94.0746 32.8398 63.2303 -2.41965 55.9568 -42.8233"
+            stroke="currentColor" stroke-miterlimit="10" />
+          <path
+            d="M537.791 215.073C519.964 233.098 499.336 250.645 474.269 254.315C441.41 259.126 409.422 238.286 389.513 211.704C369.594 185.13 358.665 153.106 344.294 123.17C329.923 93.2337 310.293 63.6078 280.258 49.4296C238.605 29.7646 188.105 44.5741 144.268 30.4451C107.714 18.6677 78.8538 -14.3229 72.0543 -52.1165"
+            stroke="currentColor" stroke-miterlimit="10" />
+        </svg>
+      </div>
+    </div>
+  </section>
+  <!-- Perimum Calculator -->
+<!-- Difference -->
+  <section class="section bg-tertiary">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-5">
+          <div class="section-title">
+            <p class="text-primary text-uppercase fw-bold mb-3">Difference Of Us</p>
+            <h1>What Makes Us <br> Different Form Other?</h1>
+            <div class="content mb-0 mt-4">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consv allis quam aliquet integer eget magna
+                ullam corper intesager peent esque urna. Ac eu fringilla intea dger egadv estas ut. Sed vulutate aenean
+                nunc quis a urna morbi id vitae. Vulpuate nisl</p>
+              <p>sed morbi sit ut placerat eges aeftas et. Pellen tesque tristisque magnis augue gravida pulvinar
+                placerat. Tellus massa pretra scelerisque leo. In volutpat arcu nunc nisl et, viverra faucisfbus
+                egestas.
+                In habitasse sagittis, convallis ut commodo amet, odio sagittis. Maecenas massa turpis duis felis,
+                massa.
+                Morbi feugiat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="difference-of-us-item p-3 rounded mr-0 me-lg-4">
+            <div class="d-block d-sm-flex align-items-center m-2">
+              <div class="icon me-4 mb-4 mb-sm-0"> <i class="fas fa-shield-alt mt-4" style="font-size:36px"></i>
+              </div>
+              <div class="block">
+                <h3 class="mb-3">Fast And Secure Process</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. Portaa nulla congue sed aliquam id
+                  adipiscing auue</p>
+              </div>
+            </div>
+          </div>
+          <div class="difference-of-us-item p-3 rounded mr-0 me-lg-4">
+            <div class="d-block d-sm-flex align-items-center m-2">
+              <div class="icon me-4 mb-4 mb-sm-0"> <i class="fas fa-blender-phone mt-4" style="font-size:36px"></i>
+              </div>
+              <div class="block">
+                <h3 class="mb-3">Quick Question Answers</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. Portaa nulla congue sed aliquam id
+                  adipiscing auue</p>
+              </div>
+            </div>
+          </div>
+          <div class="difference-of-us-item p-3 rounded mr-0 me-lg-4">
+            <div class="d-block d-sm-flex align-items-center m-2">
+              <div class="icon me-4 mb-4 mb-sm-0"> <i class="fas fa-money-bill-alt mt-4" style="font-size:36px"></i>
+              </div>
+              <div class="block">
+                <h3 class="mb-3">We Get You Your Cash Quick</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. Portaa nulla congue sed aliquam id
+                  adipiscing auue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- Difference -->
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center">
+            <p class="text-primary text-uppercase fw-bold mb-3">Our Service Holders</p>
+            <h1 class="mb-4">Trusted By 1.2K+ Peoples</h1>
+            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. egestas cursus pellentesque dignissim
+              dui, congue. Vel etiam ut</p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="testimonial-left h-100">
+            <img class="img-fluid animated pulse infinite" src="images/testimonials/01.jpg" alt="" />
+            <img class="img-fluid animated pulse infinite" src="images/testimonials/02.jpg" alt="" />
+            <img class="img-fluid animated pulse infinite" src="images/testimonials/03.jpg" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item text-center">
+              <img class="img-fluid rounded mx-auto mb-4" src="images/testimonials/01.jpg" alt="" />
+              <p class="fs-5">
+                Dolores sed duo clita tempor justo dolor et stet lorem kasd
+                labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy
+                et labore et tempor diam tempor erat.
+              </p>
+              <h5>Client Name</h5>
+              <span>Profession</span>
+            </div>
+            <div class="testimonial-item text-center">
+              <img class="img-fluid rounded mx-auto mb-4" src="images/testimonials/02.jpg" alt="" />
+              <p class="fs-5">
+                Dolores sed duo clita tempor justo dolor et stet lorem kasd
+                labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy
+                et labore et tempor diam tempor erat.
+              </p>
+              <h5>Client Name</h5>
+              <span>Profession</span>
+            </div>
+            <div class="testimonial-item text-center">
+              <img class="img-fluid rounded mx-auto mb-4" src="images/testimonials/03.jpg" alt="" />
+              <p class="fs-5">
+                Dolores sed duo clita tempor justo dolor et stet lorem kasd
+                labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy
+                et labore et tempor diam tempor erat.
+              </p>
+              <h5>Client Name</h5>
+              <span>Profession</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="testimonial-right h-100">
+            <img class="img-fluid animated pulse infinite" src="images/testimonials/04.jpg" alt="" />
+            <img class="img-fluid animated pulse infinite" src="images/testimonials/05.jpg" alt="" />
+            <img class="img-fluid animated pulse infinite" src="images/testimonials/06.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
+
+  <section class="bg-tertiary">
+  <div class="container-fluid footer mt-5 pt-5 wow">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h1 class="mb-4">
+            <img class="img-fluid me-3" src="images/Insurance logo.png" alt="" />
+          </h1>
+          <p class="p-footer">
+            Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+            ipsum et lorem et sit, sed stet lorem sit clita
+          </p>
+          <div class="d-flex pt-2">
+            <ul class="list-unstyled list-inline mb-0 social-icons">
+              <li class="list-inline-item me-3"><a class="icon-footer" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="list-inline-item me-3"><a class="icon-footer" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item me-3"><a class="icon-footer" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                <li class="list-inline-item me-3"><a class="icon-footer" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer mb-4">Address</h5>
+          <p>
+            <i class="fa fa-map-marker-alt me-3"></i><span class="p-footer">123 Street, New York, USA</span> 
+          </p>
+          <p><i class="fa fa-phone-alt me-3"></i><span class="p-footer">+012 345 67890</span></p>
+          <p><i class="fa fa-envelope me-3"></i><span class="p-footer">info@example.com</span></p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer mb-4">Quick Links</h5>
+          <a class="btn btn-link mb-2" href="">About Us</a>
+          <a class="btn btn-link mb-2" href="">Our Services</a>
+          <a class="btn btn-link mb-2" href="">Terms & Condition</a>
+          <a class="btn btn-link mb-2" href="">Support</a>
+          <a class="btn btn-link mb-2" href="">Contact Us</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h5 class="mb-4 footer">Subscribe</h5>
+            <div class="pe-0 pe-xl-5">
+              <form method="post">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control shadow-none bg-transparent border-end-0 e-input" placeholder="Email address"><span class="input-group-text border-1 p-0 e-input">
+                      <button class="input-group-text border-0 e-input" type="submit" name="subscribe"
+                        aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right text-light"></i></button>
+                    </span>
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
+                </div>
+              </form>
+            </div>
+            <p class="mb-0 p-footer">Lorem ipsum dolor sit amet, rdghds consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="container-fluid copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center mb-3 mb-md-0">
+            &copy; <a href="#" class="p-footer">Online Insurance</a>, All Right Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer End -->
+  <!-- # JS Plugins -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/scrollmenu/scrollmenu.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
